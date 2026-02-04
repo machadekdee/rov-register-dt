@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROV Competition Registration - TNI DT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* ธีมสี Dark Mode + TNI Blue */
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --primary-color: #3b82f6;
+            --accent-color: #ef4444;
+            --text-color: #f8fafc;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+                radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+                radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 480px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* --- ส่วนหัว (Logo) --- */
+        .header { text-align: center; margin-bottom: 10px; }
+
+        .logos-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            /* แก้ไข: ใช้พื้นหลังสีเข้มโปร่งใส ให้เข้ากับธีมและขับสีโลโก้เดิม */
+            background: rgba(15, 23, 42, 0.6);
+            padding: 15px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1); /* เพิ่มขอบบางๆ */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            backdrop-filter: blur(10px); /* เพิ่มเอฟเฟกต์เบลอฉากหลัง */
+        }
+
+        .tni-logo { height: 65px; object-fit: contain; }
+        .dt-logo { height: 50px; object-fit: contain; }
+        
+        /* เส้นแบ่งระหว่างโลโก้ */
+        .divider {
+            width: 2px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.3); /* ปรับสีเส้นแบ่งให้จางลง */
+            margin: 0 5px;
+        }
+
+        .header h1 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-shadow: 0 0 15px rgba(59, 130, 246, 0.6);
+            margin-bottom: 5px;
+        }
+        .header h1 span { color: var(--accent-color); }
+        
+        /* --- การ์ดเนื้อหา --- */
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(59, 130, 246, 0.5);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .qr-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 12px;
+            margin: 0 auto 20px;
+            display: block;
+            border: 4px solid #fff;
+            object-fit: cover;
+        }
+
+        /* --- ปุ่มกด --- */
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 14px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+        .btn-register { 
+            background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%); 
+            color: white; 
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+        }
+        .btn-line { 
+            background: linear-gradient(135deg, #06c755 0%, #05a546 100%); 
+            color: white; 
+            box-shadow: 0 4px 15px rgba(6, 199, 85, 0.3);
+        }
+        .btn:hover { transform: scale(1.02); filter: brightness(1.1); }
+
+        .footer { text-align: center; font-size: 0.85rem; opacity: 0.6; margin-top: 30px; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="header">
+            <div class="logos-wrapper">
+                <img src="https://www.tni.ac.th/home/img/logo.jpg" alt="TNI Logo" class="tni-logo">
+                
+                <div class="divider"></div>
+                
+                <img src="https://www.tni.ac.th/dt/img/logo/dt-logo.png" alt="DT Faculty Logo" class="dt-logo">
+            </div>
+            <h1>ROV <span>E-Sport</span></h1>
+            <p>การแข่งขัน ROV ประจำปี คณะเทคโนโลยีดิจิทัล</p>
+        </div>
+
+        <div class="card">
+            <div class="card-title">📝 ลงทะเบียนแข่งขัน</div>
+            <img src="https://img2.pic.in.th/qr-e0224b4feaeb3363.png" alt="QR Code รับสมัคร" class="qr-image">
+            
+            <a href="https://forms.gle/YyYNsuXm9AhrQkLh7" target="_blank" class="btn btn-register">
+                คลิกเพื่อกรอกใบสมัคร
+            </a>
+        </div>
+
+        <div class="card">
+            <div class="card-title">💬 เข้าร่วมกลุ่ม OpenChat รับข่าวสารต่างๆ</div>
+            <img src="https://img2.pic.in.th/a08d8f25-107b-4482-9f66-17990797c9da.jpg" alt="QR Code Line OpenChat" class="qr-image">
+            
+            <a href="https://line.me/ti/g2/KqFCD0qPTBZgoEornhMmZm9Fv1667z6v7R1U7w?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" target="_blank" class="btn btn-line">
+                คลิกเพื่อเข้ากลุ่ม Line
+            </a>
+        </div>
+
+        <div class="footer">
+            &copy; 2026 Faculty of Digital Technology, Thai-Nichi Institute of Technology Website Developed by Narubet Laichapit
+        </div>
+
+    </div>
+
+</body>
+</html>
